@@ -243,9 +243,3 @@ footer span {
     width: 360px;
   }
 }
-
-@media (min-width:512px) and (max-width:767px) {
-  .col-xs-6 {
-    
-  }
-}
