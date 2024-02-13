@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+body {
+    background-color: #61122f;
+    font-size: 16px;
+    color: #fff;
+    overflow-x: hidden;
+    font-family: 'Lora',cursive;
+}
+
+#navbar-header {
+  background-color: #f6b319;
+  border-radius: 0;
+  border: 0;
+}
+
+#logo-img {
+  background: url('../img/restaurtant_logo_sm.png') no-repeat;
+  width: 150px;
+  height: 125px;
+  margin: -10px -5px 10px 0px;
+}
+
+a.navbar-brand {
+  display: flex;
+  justify-content: baseline;
+}
+
+.navbar-brand h1{
+  padding-top: 30px;
+  font-family: 'Lora', cursive;
+  color: #557c3e;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 2px 2px 3px #222;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
+}
+
+#phone{
+  margin-left: 2em;
+  font-size: 1.5em;
+}
+#phone span p{
+  font-size: .8em;
+  text-align: right;
+}
+
+.navbar-brand h1 p {
+  color: #222;
+  text-shadow: none;
+  text-transform: uppercase;
+  font-size: .4em;
+  margin-top: 5px;
+}
+
+.navbar-brand p span {
+  margin-left:-5px;
+  vertical-align: middle;
+}
+
+
+
+#navbar-nav {
+  text-align: center;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+#navbar-nav li .navbar-icon:hover {
+  border: groove #61122f .12em ;
+  border-top-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  border-top-right-radius: .2rem;
+  border-bottom-left-radius: .2rem;
+  color:#61122f;
+}
+
+#phone a:hover {
+  text-shadow: 5px 5px 5px;
+  color: #61122f;
+} 
+
+.nav-item svg {
+  width: 2rem;
+  margin-bottom: -2rem;
+}
+
+.jumbotron img {
+  box-shadow: 0 0 50px #222;
+  border: 2px solid #3f0c1f;
+}
+
+#home-tiles {
+  margin-top: 50px;
+}
+
+#menu-tile,
+#specials-tile,
+#map-tile {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 15px;
+  position: relative;
+  border: 2px solid #222;
+  overflow: hidden;
+}
+
+#menu-tile:hover,
+#specials-tile:hover,
+#map-tile:hover {
+  box-shadow: 0 1px 10px 1px #f6b319;
+}
+
+#menu-tile {
+  background: url('../img/menu-tile.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#specials-tile {
+  background: url('../img/specials-tile.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#menu-tile span, 
+#specials-tile span,
+#map-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  background-color: #222;
+  color: #fff;
+  opacity: .75;
+}
+
+footer {
+  font-size: .8rem;
+  font-weight: 500;
+  font-style:italic;
+  text-align: center;
+  background-color: #3f0c1f;
+}
+
+#copyright {
+  margin-top: 30px;
+  padding: 20px;
+  color: #f6b319;
+}
+
+#copyright a:focus,
+#copyright a:link {
+  text-decoration:none;
+  font-size: .9rem;
+}
+
+#copyright a:hover,
+#copyright a:active {
+  color: #fff;
+  font-size: 1rem;
+}
+
+
+
+/* Extra Small */
+@media (max-width:576px) {
+  #mainHeader{
+    font-size: 2rem;
+  }
+  li a {
+    align-items: center;
+    float: left; 
+  }
+  li a p{
+    margin-top: .9rem;
+    margin-left: .5rem;
+    float:right;
+    font-size: 1.25rem;
+  }
+  #phone {
+    display: none;
+  }
+}
+
+/* Bigger Screens */
+
+@media (min-width:577px) {
+  #mainHeader{
+    font-size: 1fr;
+  }
+  #menu-tiles, #specials-tiles {
+    width: 360px;
+  }
+}
