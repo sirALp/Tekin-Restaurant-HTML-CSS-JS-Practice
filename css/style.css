@@ -30,7 +30,7 @@ a.navbar-brand {
   padding-top: 30px;
   font-family: 'Lora', cursive;
   color: #557c3e;
-  font-size: 2em;
+  font-size: 2.2em;
   text-transform: uppercase;
   font-weight: 700;
   text-shadow: 2px 2px 3px #222;
@@ -179,11 +179,122 @@ footer span {
 }
 
 
+
+
+/* Menu-Categories Page */
+
+.category-tile {
+  position: relative;
+  border: 2px solid #3f0c1f;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 15px;
+}
+.category-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  background-color: #222;
+  color: #fff;
+  opacity: .75;
+}
+
+/* Single Category Page */
+
+.menu-item-tile hr {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.menu-item-tile .menu-item-price {
+  font-size: 1.1em;
+  text-align: right;
+  margin-top: -15px;
+  margin-right: -15px;
+}
+
+.menu-item-description {
+  padding-right: 30px;
+}
+
+h3.menu-item-tile {
+  margin: 0 0 10px;
+}
+
+.menu-item-details {
+  font-size: .9em;
+  font-style: italic;
+}
+
+.menu-item-tile .menu-item-price span {
+  font-size: .6em;
+}
+
+.menu-item-photo {
+  position: relative;
+  border: 2px solid #3f0c1f;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 -15px 20px auto;
+  max-width: 250px;
+}
+
+.menu-item-photo div {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 5rem;
+  background-color: #557c3e;
+  text-align: center;
+}
+
+/* End of single-category.html */
+
+/* Phone Number attribute which pops-off while on the phone */
+
+
+
+a#phone-xs svg {
+  width: 32px;
+  fill: #f6b319;
+}
+
+a#phone-xs {
+  background-color: #3f0c1f;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  margin: 10px auto 10px;
+  padding: 10px 30px;
+  border: 2px solid #222;
+  box-shadow: 2px 2px 3px #222;
+}
+
+a#phone-xs .d-inline {
+  margin-right:10px;
+  position: relative;
+  top: 2.5px;
+}
+
+a#phone-xs:hover,
+a#phone-xs:active {
+  text-decoration: none;
+  background-color: white;
+  color: #61122f;
+}
+
+a#phone-xs:link {
+  text-decoration: none;
+}
+
 /* Extra Small */
 @media (max-width:576px) {
-  #mainHeader{
-    font-size: 2rem;
-  }
   li a {
     align-items: center;
     float: left; 
@@ -210,36 +321,33 @@ footer span {
 
 }
 
-/* Menu-Categories Page */
+/* Small-screen */
 
-.category-tile {
-  position: relative;
-  border: 2px solid #3f0c1f;
-  overflow: hidden;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto 15px;
+@media (max-width:767px) {
+  .menu-item-photo {
+    margin:0 auto 20px;
+  }
+
+  .navbar-brand #mainHeader {
+    font-size: 7vw;
+  }
+  
+  .menu-item-tile .menu-item-price {
+    text-align: center;
+  }
+
+  .menu-item-description {
+    text-align: center;
+  }
+
 }
-.category-tile span {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  background-color: #222;
-  color: #fff;
-  opacity: .75;
-}
+
 
 /* Bigger Screens */
 
 @media (min-width:577px) {
-  #mainHeader{
-    font-size: 1fr;
-  }
   #menu-tiles, #specials-tiles {
     width: 360px;
   }
 }
+
