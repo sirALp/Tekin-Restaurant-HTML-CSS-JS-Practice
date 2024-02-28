@@ -208,7 +208,24 @@ $(function (){// same as document.addEventListener("DOMContentLoaded"...)
         portionValue = "(" + portionValue + ")";
         html = insertProperty(html, portionPropName, portionValue);
         return html;
-      }
+    }
+
+    var switchMenuToActive = function(){
+        var classes = document.querySelector("#navHomeButton").className;
+        classes = classes.replace(new RegExp("active","g"),"");
+        document.querySelector("#navHomeButton").className = classes;
+    
+        // add active to menu button if not already there
+        
+        classes = document.querySelector("#navMenuButton").className;
+        if (classes.indexOf("active") == -1){
+            classes += " active";
+            document.querySelector("#navMenuButton").className = classes;
+        }
+    };
+
+
+
 
 
     global.$tekinrest = tekinrest;
