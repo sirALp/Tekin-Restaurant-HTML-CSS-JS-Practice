@@ -210,23 +210,33 @@ $(function (){// same as document.addEventListener("DOMContentLoaded"...)
         return html;
     }
 
-    var switchMenuToActive = function(){
-        var classes = document.querySelector("#navHomeButton").className;
-        classes = classes.replace(new RegExp("active","g"),"");
-        document.querySelector("#navHomeButton").className = classes;
-    
-        // add active to menu button if not already there
-        
-        classes = document.querySelector("#navMenuButton").className;
-        if (classes.indexOf("active") == -1){
-            classes += " active";
-            document.querySelector("#navMenuButton").className = classes;
+    var switchMenuButtonToActive = function (page) {
+        var classValue = document.querySelector("#navHomeButton").className;
+        classValue = classValue.replace(new RegExp("active","g"),"");
+        document.querySelector("#navHomeButton").className = classValue;
+
+        classValue = document.querySelector("#navMenuButton").className;
+        if ( classValue.indexOf("active") == -1 ){//meaning doesn't include active attribute
+            classValue += " active";
+            document.querySelector("#navMenuButton").className = classValue;
         }
     };
 
+    var switchHomeButtonToActive = function () {
+        var classValue = document.querySelector("#navMenuButton").className;
+        classValue = classValue.replace(new RegExp("active","g"),"");
+        document.querySelector("#navMenuButton").className = classValue;
+
+        classValue = document.querySelector("#navHomeButton").className;
+        if ( classValue.indexOf("active") == -1 ){//meaning doesn't include active attribute
+            classValue += " active";
+            document.querySelector("#navHomeButton").className = classValue;
+        }
+    }
 
 
 
-
+    global.switchHomeButtonToActive = switchHomeButtonToActive;
+    global.switchMenuButtonToActive = switchMenuButtonToActive;
     global.$tekinrest = tekinrest;
 })(window);
