@@ -10,18 +10,18 @@ $(function () {
 });
 
 const firebaseConfig = {
-    apiKey: "AIzaSyC3GYyOhU6pjgYaeJIJ-KXyS-65PnKdK5Q",
-    authDomain: "sistem-analiz-proje.firebaseapp.com",
-    projectId: "sistem-analiz-proje",
-    storageBucket: "sistem-analiz-proje.appspot.com",
-    messagingSenderId: "27776536874",
-    appId: "1:27776536874:web:684ea0a88d59b856aa4e53",
-    measurementId: "G-H60XL19L4C",
-  };
-  
-// Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+  apiKey: "AIzaSyC3GYyOhU6pjgYaeJIJ-KXyS-65PnKdK5Q",
+  authDomain: "sistem-analiz-proje.firebaseapp.com",
+  projectId: "sistem-analiz-proje",
+  storageBucket: "sistem-analiz-proje.appspot.com",
+  messagingSenderId: "27776536874",
+  appId: "1:27776536874:web:684ea0a88d59b856aa4e53",
+  measurementId: "G-H60XL19L4C",
+};
+
+// Initialization Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 (function (global) {
   var tekinrest = {};
@@ -268,4 +268,3 @@ import { getAnalytics } from "firebase/analytics";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
